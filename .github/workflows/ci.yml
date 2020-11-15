@@ -177,9 +177,6 @@ jobs:
               throw("Not found workflow")
             }
 
-            console.log(`::set-env name=WORKFLOW_ID::${ workflow_id }`)
-            console.log(`::set-env name=ISSUE_NUMBER::${ result.data.number }`)
-
             console.log(process.env)
 
             dispatch_result = await personal_github.actions.createWorkflowDispatch({
@@ -323,7 +320,7 @@ jobs:
           echo $NEW_VERSION
           cat VERSION
           echo $NEW_VERSION > VERSION
-          git add VERSION CHANGELOG.md && git commit -m "Update version and changelog" && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
+          git add VERSION CHANGELOG.md && git commit -m "Update version and changelog" || echo "No changes to CHANGELOG.md"
           git push "https://$GITHUB_REPOSITORY_OWNER:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
         env:
           VERSION: ${{ steps.get_version.outputs.VERSION }}
