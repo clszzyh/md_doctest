@@ -17,7 +17,7 @@ defmodule MdDoctest.MixProject do
       package: [
         licenses: ["MIT"],
         exclude_patterns: [".DS_Store"],
-        files: ["VERSION"],
+        files: ["lib", ".formatter.exs", "mix.exs", "README*", "CHANGELOG*", "VERSION"],
         links: %{
           "GitHub" => @github_url,
           "Changelog" => @github_url <> "/blob/master/CHANGELOG.md"
