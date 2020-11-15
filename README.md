@@ -11,6 +11,25 @@ Markdown code block to elixir doctest
 
 <!-- MDOC -->
 
+```elixir
+a = 2
+b = 3
+a + b
+## => 5
+
+a = 2
+b = 3
+a
+## => 2
+```
+
+```elixir
+1 + 1
+## => 2
+```
+
+<!-- MDOC -->
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
