@@ -29,7 +29,7 @@ jobs:
     strategy:
       matrix:
         elixir: ["1.11.2"]
-        otp: [23.1.1]
+        otp: [23.1.2]
     steps:
       - name: Run id
         id: get_run_id
@@ -271,7 +271,7 @@ jobs:
     strategy:
       matrix:
         elixir: ["1.11.2"]
-        otp: [23.1.1]
+        otp: [23.1.2]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
