@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.0](https://github.com/clszzyh/md_doctest/tree/v1.0.0) (2020-11-15)
+
+[Full Changelog](https://github.com/clszzyh/md_doctest/compare/v0.1.4...v1.0.0)
+
 ## [v0.1.4](https://github.com/clszzyh/md_doctest/tree/v0.1.4) (2020-11-15)
 
 [Full Changelog](https://github.com/clszzyh/md_doctest/compare/v0.1.3...v0.1.4)
