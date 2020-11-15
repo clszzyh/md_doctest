@@ -1,5 +1,10 @@
 # MdDoctest
 
+[![ci](https://github.com/clszzyh/md_doctest/workflows/ci/badge.svg)](https://github.com/clszzyh/md_doctest/actions)
+[![Hex.pm](https://img.shields.io/hexpm/v/md_doctest)](http://hex.pm/packages/md_doctest)
+[![Hex.pm](https://img.shields.io/hexpm/dt/md_doctest)](http://hex.pm/packages/md_doctest)
+[![Documentation](https://img.shields.io/badge/hexdocs-latest-blue.svg)](https://hexdocs.pm/md_doctest/readme.html)
+
 <!-- MDOC -->
 
 Markdown code block to elixir doctest
