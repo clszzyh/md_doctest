@@ -48,7 +48,8 @@ defmodule MdDoctest.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:earmark, "~> 1.4.0"}
+      {:earmark, "~> 1.4.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
