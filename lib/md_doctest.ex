@@ -8,9 +8,12 @@ defmodule MdDoctest.Parser do
 
   @code_result_prefix "## => "
 
-  @code_header "    iex> "
-  @code_body "    ...> "
-  @code_result "    "
+  @indent_size 4
+  @indent String.duplicate(" ", @indent_size)
+
+  @code_header @indent <> "iex> "
+  @code_body @indent <> "...> "
+  @code_result @indent <> ""
 
   def to_doctest(binary) when is_binary(binary) do
     @regex
