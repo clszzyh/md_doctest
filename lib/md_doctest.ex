@@ -85,17 +85,25 @@ defmodule MdDoctest.TransformModuleDoc do
   end
 
   defmacro __before_compile__(env) do
-    {line, binary} = Module.get_attribute(env.module, :moduledoc)
-    moduledoc = binary |> MdDoctest.Parser.to_doctest()
+    env.module
+    |> Module.get_attribute(:moduledoc)
+    |> case do
+      {line, binary} when is_binary(binary) ->
+        moduledoc = binary |> MdDoctest.Parser.to_doctest()
 
-    quote do
-      Module.put_attribute(
-        unquote(env.module),
-        :moduledoc,
-        {unquote(line), unquote(moduledoc)}
-      )
+        quote do
+          Module.put_attribute(
+            unquote(env.module),
+            :moduledoc,
+            {unquote(line), unquote(moduledoc)}
+          )
 
-      def __moduledoc__, do: unquote(moduledoc)
+          def __moduledoc__, do: unquote(moduledoc)
+        end
+
+      _ ->
+        quote do
+        end
     end
   end
 end
